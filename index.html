@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZESTORA — Camilan Inovatif, Lezat, dan Ramah Lingkungan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        orange: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- [NAVBAR] -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-seedling text-lg"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight text-slate-900">ZEST<span class="text-orange-600">ORA</span></span>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#beranda" class="hover:text-orange-600 transition-colors">Beranda</a>
+                    <a href="#keunggulan" class="hover:text-orange-600 transition-colors">Keunggulan</a>
+                    <a href="#proses" class="hover:text-orange-600 transition-colors">Proses</a>
+                    <a href="#target" class="hover:text-orange-600 transition-colors">Pemesanan</a>
+                </nav>
+
+                <!-- Button CTA -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://wa.me/62888888" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md shadow-orange-600/20 hover:shadow-lg hover:shadow-orange-600/30 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Pesan via WA (0888888)</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" aria-label="Menu" class="p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600">Beranda</a>
+            <a href="#keunggulan" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600">Keunggulan</a>
+            <a href="#proses" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600">Proses</a>
+            <a href="#target" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600">Pemesanan</a>
+            <div class="pt-2">
+                <a href="https://wa.me/62888888" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-semibold px-5 py-3 rounded-xl shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Pesan via WA (0888888)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- [HERO SECTION] -->
+    <section id="beranda" class="relative overflow-hidden bg-gradient-to-b from-orange-50/50 via-white to-slate-50 pt-16 pb-24 lg:pt-24 lg:pb-32">
+        <!-- Subtle Background Accent Shapes -->
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-orange-200/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-40 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 bg-orange-100/80 border border-orange-200 text-orange-800 text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow-sm">
+                        <span>🌿 Inovasi Camilan Upcycling & Zero Waste</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+                        Ubah Limbah Jadi Renyah! Nikmati Camilan <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-500">Lezat, Sehat, dan Ramah Lingkungan.</span>
+                    </h1>
+
+                    <!-- Sub-headline -->
+                    <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Solusi ngemil bebas rasa bersalah dengan <span class="font-semibold text-slate-800">Kerupuk Jantung Pisang ZESTORA</span> dipadu Bumbu Kulit Udang Gurih Alami. Kaya serat, kaya rasa, dan zero waste!
+                    </p>
+
+                    <!-- Button CTA -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/62888888" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-700 hover:to-amber-600 text-white font-bold text-base px-8 py-4 rounded-2xl shadow-xl shadow-orange-600/30 hover:shadow-orange-600/40 transition-all transform hover:-translate-y-1">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>📲 Pesan Sekarang via WhatsApp</span>
+                        </a>
+                        <div class="flex items-center gap-3 text-sm text-slate-500 font-medium px-2 py-1">
+                            <div class="flex -space-x-2">
+                                <div class="w-8 h-8 rounded-full bg-orange-200 border-2 border-white flex items-center justify-center text-xs font-bold text-orange-700">100%</div>
+                                <div class="w-8 h-8 rounded-full bg-amber-200 border-2 border-white flex items-center justify-center text-xs font-bold text-amber-700">Alami</div>
+                            </div>
+                            <span>Teruji Higienis & Halal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Illustration Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Decorative glow -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-500 to-amber-400 rounded-3xl transform rotate-3 scale-105 opacity-20 blur-xl"></div>
+                        
+                        <!-- Main Card -->
+                        <div class="relative bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-2xl shadow-slate-200/60 space-y-6">
+                            <div class="relative h-64 sm:h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50 flex items-center justify-center border border-orange-100 group">
+                                <!-- Fallback / Image Representation via SVG/Icon design -->
+                                <div class="absolute inset-0 bg-[radial-gradient(#f97316_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+                                <div class="text-center space-y-3 z-10 p-6">
+                                    <div class="w-20 h-20 mx-auto bg-white rounded-2xl shadow-lg flex items-center justify-center text-orange-600 group-hover:scale-110 transition-transform">
+                                        <i class="fa-solid fa-bowl-food text-4xl"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-slate-900">ZESTORA Crisp</h3>
+                                    <p class="text-xs text-slate-500 font-medium bg-white/80 px-3 py-1 rounded-full inline-block shadow-sm">Jantung Pisang & Kulit Udang</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                    <span class="block text-2xl font-extrabold text-orange-600">High Fiber</span>
+                                    <span class="text-xs text-slate-500 font-medium">Tinggi Serat Alami</span>
+                                </div>
+                                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                    <span class="block text-2xl font-extrabold text-orange-600">Zero Waste</span>
+                                    <span class="text-xs text-slate-500 font-medium">Upcycling Pangan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- [PROBLEM & SOLUTION SECTION] -->
+    <section class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                
+                <!-- Problem Card -->
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-10 border border-slate-200/60 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-slate-200/40 rounded-bl-full pointer-events-none"></div>
+                    <div class="space-y-4 relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-slate-200 flex items-center justify-center text-slate-700">
+                            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
+                            Sering Ingin Ngemil, Tapi Takut Lemak & Kolesterol?
+                        </h3>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Banyak camilan di pasaran kaya akan minyak jenuh, tinggi kalori, dan minim nutrisi. Di sisi lain, potensi bahan alam lokal kita sering terbuang sia-sia.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-200/60 flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                        <i class="fa-solid fa-circle-xmark text-red-500"></i> Masalah Umum Camilan Konvensional
+                    </div>
+                </div>
+
+                <!-- Solution Card -->
+                <div class="bg-gradient-to-br from-orange-500 to-amber-600 text-white rounded-3xl p-8 sm:p-10 shadow-xl shadow-orange-600/20 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full pointer-events-none"></div>
+                    <div class="space-y-4 relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+                            <i class="fa-solid fa-lightbulb text-xl"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">
+                            ZESTORA Hadir Sebagai Solusi Upcycling Food!
+                        </h3>
+                        <p class="text-orange-100 leading-relaxed text-sm sm:text-base font-normal">
+                            Kami mengolah jantung pisang segar dan kulit udang pilihan yang bernilai gizi tinggi menjadi camilan renyah yang lezat, bernutrisi, dan mendukung prinsip zero waste.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-white/20 flex items-center gap-2 text-xs font-bold text-orange-100 uppercase tracking-wider">
+                        <i class="fa-solid fa-circle-check text-white"></i> Inovasi Cerdas Zestora
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- [FEATURE / KEUNGGULAN SECTION] -->
+    <section id="keunggulan" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-orange-600 font-bold text-sm tracking-widest uppercase bg-orange-100 px-3 py-1 rounded-full">Keunggulan Produk</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Kenapa Harus Memilih ZESTORA?
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Diracik dengan riset mendalam untuk memberikan manfaat kesehatan maksimal tanpa mengorbankan kelezatan rasa.
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Keunggulan 1 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:border-orange-500 hover:shadow-orange-500/10 transition-all group flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors shadow-inner">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">1. Nutrisi Tinggi & Baik untuk Kesehatan</h3>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-orange-600 mt-1 shrink-0"></i>
+                                <span><strong class="text-slate-800">Tinggi Serat Pangan:</strong> Baik untuk pencernaan & kenyang lebih lama.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-orange-600 mt-1 shrink-0"></i>
+                                <span><strong class="text-slate-800">Indeks Glikemik Rendah:</strong> Aman untuk pembatasan gula.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-orange-600 mt-1 shrink-0"></i>
+                                <span><strong class="text-slate-800">Kaya Antioksidan & Mineral:</strong> Flavonoid, polifenol, kalium, zat besi, fosfor, kalsium.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-orange-600 mt-1 shrink-0"></i>
+                                <span><strong class="text-slate-800">Bebas Kolesterol:</strong> 100% bahan dasar nabati berkualitas.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100 text-xs font-semibold text-orange-600 flex items-center gap-1">
+                        <span>Sehat & Menutrisi</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- Keunggulan 2 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:border-orange-500 hover:shadow-orange-500/10 transition-all group flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors shadow-inner">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">2. Olahan Ramah Lingkungan (Zero Waste)</h3>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-orange-600 mt-1 shrink-0"></i>
+                                <span><strong class="text-slate-800">Inovasi Upcycling Food:</strong> Mengubah limbah pangan lokal menjadi produk bernilai tinggi.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-orange-600 mt-1 shrink-0"></i>
+                                <span><strong class="text-slate-800">Bumbu Udang Alami:</strong> Ekstraksi kulit udang berkualitas, gurih umami khas tanpa pengawet sintetis.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-orange-600 mt-1 shrink-0"></i>
+                                <span><strong class="text-slate-800">Pasokan Melimpah & Berkelanjutan:</strong> Hasil bumi lokal tersedia sepanjang tahun.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100 text-xs font-semibold text-orange-600 flex items-center gap-1">
+                        <span>Eco-Friendly</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- Keunggulan 3 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:border-orange-500 hover:shadow-orange-500/10 transition-all group flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors shadow-inner">
+                            <i class="fa-solid fa-face-smile-beam"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">3. Cita Rasa Khas & Tekstur Unik</h3>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-orange-600 mt-1 shrink-0"></i>
+                                <span><strong class="text-slate-800">Renyah & Tidak Serat:</strong> Tekstur crispy khas serat alami jantung pisang yang renyah di setiap gigitan.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-orange-600 mt-1 shrink-0"></i>
+                                <span><strong class="text-slate-800">Gurih Alami Umami:</strong> Perpaduan pas antara kerupuk sehat dan bumbu udang pilihan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100 text-xs font-semibold text-orange-600 flex items-center gap-1">
+                        <span>Lezat & Nagih</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- [PROSES PEMBUATAN SECTION] -->
+    <section id="proses" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-orange-600 font-bold text-sm tracking-widest uppercase bg-orange-100 px-3 py-1 rounded-full">Standar Kualitas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Dari Bahan Alam Pilihan Menjadi Camilan Premium
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Diproses secara higienis dengan teknologi terstandar untuk menjaga nutrisi dan kerenyahan sempurna.
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Step 1 -->
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200/60 relative group hover:bg-orange-50/50 hover:border-orange-200 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-600 text-white font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-orange-600/30">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Seleksi Bahan</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Jantung pisang segar & kulit udang pilihan dibersihkan secara higienis melalui tahapan sortir ketat.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200/60 relative group hover:bg-orange-50/50 hover:border-orange-200 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-600 text-white font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-orange-600/30">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Pengolahan Halus</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Dihaluskan dan dicampur dengan tepung tapioka berkualitas serta bumbu alami rempah pilihan.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200/60 relative group hover:bg-orange-50/50 hover:border-orange-200 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-600 text-white font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-orange-600/30">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Pengukusan & Pengeringan</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Dikukus dengan presisi tinggi, diiris tipis secara merata, lalu dikeringkan di bawah standar higienis.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200/60 relative group hover:bg-orange-50/50 hover:border-orange-200 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-600 text-white font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-orange-600/30">
+                        04
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Penggorengan Sempurna</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Digoreng hingga renyah keemasan dengan minyak pilihan bermutu tinggi, siap dinikmati kapan saja.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- [TARGET AUDIENS SECTION] -->
+    <section id="target" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-orange-600 font-bold text-sm tracking-widest uppercase bg-orange-100 px-3 py-1 rounded-full">Target Audiens</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Siapa yang Cocok Menikmati ZESTORA?
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Camilan pas untuk berbagai kalangan yang peduli akan kesehatan dan kelestarian lingkungan.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Target 1 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg text-center space-y-4">
+                    <div class="w-16 h-16 rounded-full bg-orange-50 text-orange-600 mx-auto flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">1. Pencinta Gaya Hidup Sehat (Health-Conscious)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Pilihan tepat bagi Anda yang tetap ingin menikmati camilan gurih tanpa rasa bersalah terhadap kalori dan kolesterol berlebih.
+                    </p>
+                </div>
+
+                <!-- Target 2 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg text-center space-y-4">
+                    <div class="w-16 h-16 rounded-full bg-orange-50 text-orange-600 mx-auto flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">2. Penggemar Produk Lokal & Ramah Lingkungan</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Mendukung gerakan zero waste dan pemanfaatan komoditas alam nusantara melalui inovasi pangan berkelanjutan.
+                    </p>
+                </div>
+
+                <!-- Target 3 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg text-center space-y-4">
+                    <div class="w-16 h-16 rounded-full bg-orange-50 text-orange-600 mx-auto flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">3. Keluarga & Penggemar Camilan Unik</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Teman santai berkualitas untuk keluarga tercinta di rumah, suguhan tamu, atau teman kerja yang menyenangkan.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- [FINAL CTA SECTION] -->
+    <section class="py-24 bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+            <span class="inline-block bg-white/20 backdrop-blur-md text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-full uppercase tracking-widest shadow-sm">
+                🔥 Promo Terbatas
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                Siap Merasakan Renyah & Gurihnya ZESTORA?
+            </h2>
+            <p class="text-orange-100 text-lg sm:text-xl max-w-2xl mx-auto font-normal leading-relaxed">
+                Dapatkan harga promosi khusus untuk pemesanan hari ini! Stok bahan baku segar terbatas setiap minggunya.
+            </p>
+            <div class="pt-4">
+                <a href="https://wa.me/62888888" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-white text-orange-600 hover:bg-slate-100 font-extrabold text-base sm:text-lg px-8 py-4 rounded-2xl shadow-2xl shadow-black/10 transition-all transform hover:-translate-y-1">
+                    <i class="fa-brands fa-whatsapp text-2xl text-green-600"></i>
+                    <span>👉 CHAT WHATSAPP: 0888888</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- [FOOTER] -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <!-- Brand Info -->
+                <div class="space-y-2">
+                    <div class="flex items-center justify-center md:justify-start gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-orange-600 flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-seedling text-sm"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-white tracking-tight">ZEST<span class="text-orange-500">ORA</span></span>
+                    </div>
+                    <p class="text-sm text-slate-400 max-w-sm">
+                        ZESTORA — Camilan Inovatif, Lezat, dan Ramah Lingkungan.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="text-sm space-y-1">
+                    <p class="text-slate-300 font-semibold">Layanan Pemesanan & Mitra:</p>
+                    <a href="https://wa.me/62888888" target="_blank" rel="noopener noreferrer" class="text-orange-400 hover:text-orange-300 font-bold text-base flex items-center justify-center md:justify-end gap-1.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> 0888888
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>Copyright © 2026 ZESTORA. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#beranda" class="hover:text-slate-400 transition-colors">Kebijakan Privasi</a>
+                    <a href="#beranda" class="hover:text-slate-400 transition-colors">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JS for Mobile Menu Toggle -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
